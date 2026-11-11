@@ -1,0 +1,54 @@
+/* Web / iPad sürümüne özgü düzen: dokunmatik hedefler, güvenli alanlar, dar ekran. */
+html, body { height: 100dvh; }
+body {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+input, textarea, .sonuc .deger, .tablo td, .mlz-bilgi dd { -webkit-user-select: text; }
+.arac-govde, .mobilya-liste, .pencere-govde { -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+
+/* Parmakla kullanım: daha büyük dokunma hedefleri; 16 px altı yazı iOS'ta odaklanınca sayfayı yakınlaştırır. */
+@media (pointer: coarse) {
+  input[type="text"], input[type="number"], input[type="search"], select, textarea { font-size: 16px; height: 40px; }
+  textarea { height: auto; }
+  .dugme { height: 40px; padding: 0 14px; }
+  .dugme.kucuk { height: 34px; padding: 0 12px; }
+  .sekme { padding: 12px 10px; }
+  .cip { height: 36px; padding: 0 14px; border-radius: 18px; }
+  .bolmeli button { height: 34px; }
+  .pencere-kapat { width: 40px; height: 40px; }
+  input[type="checkbox"] { width: 20px; height: 20px; }
+  .tut.kose { width: 22px; height: 22px; margin: -11px 0 0 -11px; }
+  .tut.don { width: 24px; height: 24px; margin-left: -12px; top: -38px; }
+  .tut-sap { height: 28px; top: -28px; }
+  .renk-deger { height: 36px; }
+  .kose-tablo { grid-template-columns: 26px 1fr 1fr 40px; }
+  .mobilya-oge { padding: 8px; }
+}
+
+/* Dikey tutuş ve küçük ekran: yan menü yalnız simge, planlayıcı iki sütun. */
+@media (max-width: 1000px) {
+  .yan-menu { width: 68px; padding: 14px 8px; }
+  .marka { justify-content: center; padding: 2px 0 14px; }
+  .marka > div, .sekme span, .yan-alt .etiket-kucuk { display: none; }
+  .sekme { justify-content: center; }
+  .sekme svg { width: 22px; height: 22px; }
+  .yan-alt { padding: 8px 0 0; }
+  #tema-secici { flex-direction: column; }
+  #tema-secici button { padding: 0 2px; font-size: 11px; }
+  .arac-baslik { padding: 14px 16px 10px; }
+  .arac-govde { padding: 4px 16px 20px; }
+  .plan-duzen { grid-template-columns: 230px minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, 40%); padding: 4px 16px 16px; }
+  .plan-sol { grid-column: 1; grid-row: 1; }
+  .plan-tuval { grid-column: 2; grid-row: 1 / span 2; }
+  .plan-sag { grid-column: 1; grid-row: 2; overflow: auto; }
+  .palet-duzen { grid-template-columns: 1fr; }
+  .mlz-filtre, .ergo-filtre, .pano-cubuk { padding-left: 16px; padding-right: 16px; }
+  .mlz-filtre { flex-wrap: wrap; }
+  .mlz-ara, .ergo-ara { width: 220px !important; }
+  .pano-alan { margin: 0 16px; }
+  .pencere.genis, .pencere.orta { width: 100%; }
+}
