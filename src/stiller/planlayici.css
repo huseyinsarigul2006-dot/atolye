@@ -1,0 +1,38 @@
+/* Oda yerleşim planlayıcı */
+.plan-ad { width: 180px !important; font-weight: 600; }
+.plan-duzen { flex: 1; min-height: 0; display: grid; grid-template-columns: 250px minmax(0, 1fr) 250px; gap: 14px; padding: 4px 24px 20px; }
+.plan-sol, .plan-sag { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+.plan-sol .kart, .plan-sag .kart { padding: 14px; }
+.plan-secenekler { display: flex; gap: 14px; margin: 10px 0; flex-wrap: wrap; }
+.plan-kutuphane { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 8px; }
+.plan-kutuphane h2 { margin-bottom: 0; }
+.mobilya-liste { flex: 1; min-height: 0; overflow: auto; margin: 0 -6px; padding: 0 6px; }
+.mobilya-grup { position: sticky; top: 0; z-index: 1; padding: 8px 0 4px; background: var(--yuzey); font-size: 11px; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; color: var(--metin-2); }
+.mobilya-oge { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 8px; border: 1px solid transparent; border-radius: 8px; cursor: grab; }
+.mobilya-oge:hover { background: var(--yuzey-2); border-color: var(--cizgi); }
+.mobilya-ad { font-size: 13px; font-weight: 550; }
+.mobilya-olcu { font-size: 11.5px; color: var(--metin-2); font-variant-numeric: tabular-nums; }
+.plan-tuval {
+  min-width: 0; min-height: 0; overflow: auto;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--yuzey-2); border: 1px solid var(--cizgi); border-radius: var(--yaricap);
+  padding: 12px;
+}
+.plan-tuval:focus-visible { outline: none; border-color: var(--vurgu); }
+.plan-tuval svg { flex: none; display: block; border-radius: 4px; box-shadow: var(--golge); touch-action: none; }
+.plan-uyarilar { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.plan-uyarilar > div { flex: 1; min-height: 0; overflow: auto; display: flex; flex-direction: column; gap: 6px; }
+.rozet { display: inline-block; min-width: 20px; padding: 0 6px; border-radius: 10px; background: var(--uyari-zemin); color: var(--uyari); font-size: 12px; text-align: center; }
+.uyari { display: flex; gap: 8px; align-items: flex-start; padding: 8px 9px; border: 0; border-radius: 8px; font: inherit; font-size: 12.5px; text-align: left; cursor: pointer; color: var(--metin); }
+.uyari .nokta { flex: none; width: 8px; height: 8px; margin-top: 5px; border-radius: 50%; }
+.uyari.cakisma { background: var(--hata-zemin); }
+.uyari.cakisma .nokta { background: var(--hata); }
+.uyari.dar { background: var(--uyari-zemin); }
+.uyari.dar .nokta { background: var(--uyari); }
+.uyari-yok { color: var(--metin-2); font-size: 12.5px; }
+
+.plan-cad { width: 100%; margin-top: 10px; }
+.plan-altlik { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; padding: 7px 9px; border-radius: 8px; background: var(--vurgu-soluk); font-size: 12.5px; }
+.plan-altlik div { min-width: 0; display: flex; flex-direction: column; }
+.plan-altlik b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.plan-altlik span { font-size: 11.5px; color: var(--metin-2); }

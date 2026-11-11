@@ -1,0 +1,19 @@
+/* Ergonomi ölçü rehberi */
+.ergo-ara { width: 300px !important; }
+.ergo-boy { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--metin-2); }
+.ergo-boy input { width: 96px; }
+.ergo-filtre { padding: 0 24px 12px; }
+.ergo-kisisel { margin-bottom: 16px; border-color: var(--vurgu); }
+.ergo-kisisel-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.ergo-kisisel-liste .deger { color: var(--vurgu-koyu); }
+.ergo-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.ergo-izgara .bos-durum { grid-column: 1 / -1; }
+.ergo-kart { background: var(--yuzey); border: 1px solid var(--cizgi); border-radius: var(--yaricap); overflow: hidden; display: flex; flex-direction: column; }
+.ergo-sema { padding: 8px 10px 0; border-bottom: 1px solid var(--cizgi); background: color-mix(in srgb, var(--yuzey-2) 45%, var(--yuzey)); }
+.ergo-sema svg { display: block; width: 100%; height: auto; }
+.ergo-icerik { padding: 11px 13px 13px; display: flex; flex-direction: column; gap: 4px; }
+.ergo-icerik h3 { font-size: 13.5px; }
+.ergo-deger { font-size: 17px; font-weight: 650; font-variant-numeric: tabular-nums; user-select: text; }
+.ergo-size { align-self: flex-start; padding: 2px 9px; border-radius: 10px; background: var(--vurgu-soluk); color: var(--vurgu-koyu); font-size: 12.5px; }
+.ergo-icerik p { font-size: 12.5px; color: var(--metin-2); user-select: text; }
+.ergo-dipnot { margin-top: 16px; font-size: 12px; color: var(--metin-2); }

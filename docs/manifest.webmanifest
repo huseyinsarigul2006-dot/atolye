@@ -1,0 +1,26 @@
+{
+  "name": "Atölye",
+  "short_name": "Atölye",
+  "description": "İç mimarlık öğrencileri için masaüstü araç seti",
+  "lang": "tr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f4f1",
+  "theme_color": "#a6502c",
+  "icons": [
+    {
+      "src": "simgeler/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "simgeler/icon-kare-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self'">
+  <title>Atölye</title>
+  <link rel="stylesheet" href="stiller/temel.css">
+  <link rel="stylesheet" href="stiller/olcek.css">
+  <link rel="stylesheet" href="stiller/planlayici.css">
+  <link rel="stylesheet" href="stiller/palet.css">
+  <link rel="stylesheet" href="stiller/malzeme.css">
+  <link rel="stylesheet" href="stiller/ergonomi.css">
+  <link rel="stylesheet" href="stiller/moodboard.css">
+</head>
+<body>
+  <aside class="yan-menu">
+    <div class="marka">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="var(--vurgu)"/>
+        <path d="M8 23 16 8l8 15M11.2 17h9.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div class="marka-ad">Atölye</div>
+        <div class="marka-alt">İç mimarlık araçları</div>
+      </div>
+    </div>
+    <nav id="sekmeler" class="sekmeler" aria-label="Araçlar"></nav>
+    <div class="yan-alt">
+      <div class="etiket-kucuk">Tema</div>
+      <div class="bolmeli" id="tema-secici" role="group" aria-label="Tema">
+        <button data-tema="sistem">Sistem</button>
+        <button data-tema="acik">Açık</button>
+        <button data-tema="koyu">Koyu</button>
+      </div>
+      <button class="baglanti" id="veri-klasoru">Veri klasörünü aç</button>
+    </div>
+  </aside>
+  <main id="icerik" class="icerik"></main>
+  <div id="bildirimler" class="bildirimler" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

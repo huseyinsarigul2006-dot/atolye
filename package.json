@@ -1,0 +1,63 @@
+{
+  "name": "atolye",
+  "productName": "Atölye",
+  "version": "1.1.1",
+  "description": "İç mimarlık öğrencileri için masaüstü araç seti",
+  "main": "main.js",
+  "author": "Atölye",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "electron scripts/deneme.js",
+    "simge": "electron scripts/simge-uret.js",
+    "dist": "node scripts/derle.js",
+    "web": "node scripts/web-derle.js",
+    "web:sun": "node scripts/web-sun.js",
+    "web:yayin": "node scripts/web-derle.js docs"
+  },
+  "devDependencies": {
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.atolye.masaustu",
+    "productName": "Atölye",
+    "npmRebuild": false,
+    "asarUnpack": [
+      "node_modules/@mlightcad/**",
+      "src/ortak/**"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "cad.js",
+      "preload.js",
+      "src/**/*",
+      "build/icon.png"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Atölye",
+      "installerLanguages": [
+        "tr_TR"
+      ],
+      "language": "1055",
+      "artifactName": "Atolye-Kurulum-${version}.exe"
+    }
+  },
+  "dependencies": {
+    "@mlightcad/libredwg-web": "^0.8.8"
+  }
+}

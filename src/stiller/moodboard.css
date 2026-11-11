@@ -1,0 +1,29 @@
+/* Moodboard düzenleyici */
+.pano-cubuk { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 0 24px 12px; }
+.pano-boyut { display: flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; color: var(--metin-2); }
+.pano-boyut select { width: 190px; }
+.pano-cubuk .ayrac { width: 1px; height: 22px; background: var(--cizgi-guclu); margin: 0 4px; }
+.pano-secili { display: flex; gap: 6px; flex-wrap: wrap; }
+.pano-alan {
+  flex: 1; min-height: 0; margin: 0 24px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--yuzey-2); border: 1px solid var(--cizgi); border-radius: var(--yaricap);
+  overflow: hidden;
+}
+.pano-alan:focus-visible { outline: none; border-color: var(--vurgu); }
+.pano-sayfa { position: relative; flex: none; background: #ffffff; touch-action: none; }
+/* Sayfa dışına taşan görselleri örter; dışa aktarımda da bu kısım kırpılır. */
+.pano-maske { position: absolute; inset: 0; z-index: 100000; pointer-events: none; outline: 1px solid var(--cizgi-guclu); box-shadow: 0 0 0 3000px var(--yuzey-2); }
+.pano-secim { position: absolute; z-index: 100001; pointer-events: none; outline: 1.5px solid #2463c9; }
+.pano-secim .tut { pointer-events: auto; }
+.pano-sayfa.uzerinde { outline: 2px dashed var(--vurgu); outline-offset: 4px; }
+.pano-bos { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; color: #8a857c; font-size: 12.5px; pointer-events: none; }
+.pano-bos b { color: #4a4640; font-size: 15px; }
+.pano-oge { position: absolute; cursor: move; }
+.pano-oge img { width: 100%; height: 100%; display: block; object-fit: fill; pointer-events: none; }
+.pano-oge.eksik { background: repeating-linear-gradient(45deg, #eee 0 8px, #ddd 8px 16px); }
+.tut, .tut-sap { position: absolute; }
+.tut.kose { width: 12px; height: 12px; margin: -6px 0 0 -6px; background: #fff; border: 1.5px solid #2463c9; border-radius: 2px; cursor: nwse-resize; }
+.tut-sap { left: 50%; top: -22px; width: 1.5px; height: 22px; margin-left: -.75px; background: #2463c9; }
+.tut.don { left: 50%; top: -30px; width: 14px; height: 14px; margin-left: -7px; background: #2463c9; border: 2px solid #fff; border-radius: 50%; box-shadow: 0 0 0 1px #2463c9; cursor: grab; }
+.pano-durum { padding: 8px 24px 12px; font-size: 12px; color: var(--metin-2); font-variant-numeric: tabular-nums; }
